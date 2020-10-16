@@ -9,6 +9,8 @@ from django.core.mail import send_mail
 # settings.py :)
 
 # Register your models here.
+YOUR_EMAIL = "" # edit this variables as well, use the same email you added in settings.py
+
 models = [Doctor, Patient]
 
 class AppointmentAdmin(admin.ModelAdmin):
@@ -27,7 +29,7 @@ class AppointmentAdmin(admin.ModelAdmin):
                 "Cita confirmada!",
                 "Cita agendada a las " + appointment.hour + " del dia " 
                 + appointment.date + " Comentarios adicionales: " + appointment.comments ,
-                "", #edit this variables as well, use the same email you added in settings.py
+                YOUR_EMAIL,
                 [
                     Doctor.objects.get(id=appointment.doctor.id).doctor_email, 
                     Patient.objects.get(id=appointment.patient.id).patient_email
