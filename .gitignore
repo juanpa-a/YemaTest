@@ -1,0 +1,13 @@
+yematest/db.sqlite3
+yematest/*.log
+yematest/*.pot
+yematest/*.pyc
+yematest/__pycache__
+yematest/main/__pycache__
+yematest/yematest/__pycache__
+yematest/db.sqlite3
+yematest/media
+
+env
+
+yematestfront/node_modules
